@@ -41,19 +41,19 @@ To connect to this repository, do the follow in the terminal:
 
   5.1) 
   
-  $ git status   (to see all the modifications/add u did)
+  	$ git status   (to see all the modifications/add u did)
   
   5.2) 
   
-  $ git add *    (to add all the modification) or  $ git add my_sketch/deep_space.pde   (to add just a specific file)
+  	$ git add *    (to add all the modification) or  $ git add my_sketch/deep_space.pde   (to add just a specific file)
   
   5.3) 
   
-  $ git commit -m "message"  (insert a comment to keep track of what u did, e.g. "added keyboard control to the sketch")
+  	$ git commit -m "message"  (insert a comment to keep track of what u did, e.g. "added keyboard control to the sketch")
   
   5.4)
   
-  $ git push   (to push your files into the remote repository to made your files available for everybody)
+	 $ git push   (to push your files into the remote repository to made your files available for everybody)
   
   
 Repeat the step 5) each time your sketch are ready to be released or with new working functionalities
