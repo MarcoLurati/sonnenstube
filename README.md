@@ -7,9 +7,7 @@ Use the latest version of Processing, the 3.0.1 because it contains all the new 
 
 Installation of github:
 
-1) install Homebrew that allows u to install many programs directly form the terminal:
-
-	open the terminal, copy this and press enter:
+1) install Homebrew that allows u to install many programs directly form the terminal. Open the terminal, copy this and press enter:
 	
 	$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	
@@ -37,23 +35,15 @@ To connect to this repository, do the follow in the terminal:
     
 4) now you can normally work to your sketches as usual from processing
 
-5) once you are ready to share your sketch, go back to the terminal and do as follow:
+5) once you are ready to share your sketch, go back to the terminal and execute the folloing commands:
 
-  5.1) 
-  
   	$ git status   (to see all the modifications/add u did)
-  
-  5.2) 
   
   	$ git add *    (to add all the modification) or  $ git add my_sketch/deep_space.pde   (to add just a specific file)
   
-  5.3) 
-  
   	$ git commit -m "message"  (insert a comment to keep track of what u did, e.g. "added keyboard control to the sketch")
   
-  5.4)
-  
-	 $ git push   (to push your files into the remote repository to made your files available for everybody)
+	$ git push   (to push your files into the remote repository to made your files available for everybody)
   
   
 Repeat the step 5) each time your sketch are ready to be released or with new working functionalities
