@@ -1,5 +1,6 @@
 // Sonnenstube concert 29.01.2016
 // Marco
+// v3
 
 import processing.sound.*;
 
@@ -9,14 +10,14 @@ int bands = 32;
 float[] spectrum = new float[bands];
 float[] spectrum_sum = new float[bands];
 
-Star[] stars = new Star[500];  // the array containing the objects of the type "Star"
+Star[] stars = new Star[10000];  // the array containing the objects of the type "Star"
 
 // global variabels
-float bass_tones, hight_tones;
+float bass_tones, hight_tones, canvas_rotation;
 int old_millis;
 
 void setup() {
-  frameRate(60);
+  frameRate(40);
   size(displayWidth, displayHeight, P2D);
 
   // Create an Input stream which is routed into the Amplitude analyzer
@@ -68,6 +69,9 @@ void draw() {
      */
   }
 
+  translate(width/2, height/2);
+  canvas_rotation += (mouseX - width/2) * PI/width / 80;
+  rotate(canvas_rotation);
 
   // get each star from the stars array, and update it with the new level of the basses and hights
   for (Star star : stars) {
