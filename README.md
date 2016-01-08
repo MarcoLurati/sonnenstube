@@ -15,7 +15,7 @@ Installation of github:
 
 
 To connect to this repository, do the follow in the terminal:
-1) choose a place where to store the repository
+1) choose a place where to store the repository\n
     $ cd homefolder/documents/projects    e.g.
 2) copy the content of the github repository in your local folder:
     $ git clone https://github.com/MarcoLurati/sonnenstube.git
