@@ -1,5 +1,5 @@
 # sonnenstube
-Sonnenstube concert repo for visuals and so on.
+Sonnenstube concert repo for visuals and shared files.
 
 Use the latest version of Processing, the 3.0.1 because it contains all the new powerful libraries for video and sound management.
 
@@ -7,7 +7,7 @@ Use the latest version of Processing, the 3.0.1 because it contains all the new 
 
 Installation of github:
 
-1) install Homebrew that allows u to install many programs directly form the terminal. Open the terminal, copy this and press enter:
+1) install Homebrew that allows you to install many programs directly form the terminal. Open the terminal, copy this and press enter:
 	
 	$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	
@@ -19,7 +19,7 @@ Installation of github:
 
 ---
 
-To connect to this repository, do the follow in the terminal:
+To connect to this repository, proceed as follow in the terminal:
 
 1) choose a place where to store the repository
 
@@ -31,19 +31,19 @@ To connect to this repository, do the follow in the terminal:
     
 3) create your own branch to apply the modifications to the files:
 
-    $ git checkout -b my_branch   (use your name pls, so git checkout -b marco e.g.)
+    $ git checkout -b my_branch   (use your name pls, so $ git checkout -b marco e.g.)
     
-4) now you can normally work to your sketches as usual from processing
+4) now you can normally work to your sketches as usual from processing without caring about the terminal
 
-5) once you are ready to share your sketch, go back to the terminal and execute the folloing commands:
+5) once you are ready to share your sketchs, go back to the terminal and execute the folloing commands:
 
-  	$ git status   (to see all the modifications/add u did)
+  	$ git status   (to see all the modifications/add you did)
   
   	$ git add *    (to add all the modification) or  $ git add my_sketch/deep_space.pde   (to add just a specific file)
   
   	$ git commit -m "message"  (insert a comment to keep track of what u did, e.g. "added keyboard control to the sketch")
   
-	$ git push   (to push your files into the remote repository to made your files available for everybody)
+	$ git push   (to push your files into the remote repository to make your files available for everybody)
   
 
 ---
@@ -60,6 +60,8 @@ Some other userful git commands:
 
 	$ git checkout marco    (move to someone else branch to see his files and modifications. DON'T DO MODIFICATIONS AT THE MASTER BRANCH !!!)
 
-	$ git resed HEAD _path_to_file/sketch.pde   (remove a specific file if you don't want to publish it in the remote repository)
+	$ git resed HEAD my_sketch/sketch.pde   (use this command if you added a file wiht $ git add ... but you want to remove it from the commit)
+
+---
 
 For questions, let me know.
