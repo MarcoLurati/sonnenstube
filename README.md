@@ -61,7 +61,7 @@ Some other userful git commands:
 
 	$ git checkout marco    (move to someone else branch to see his files and modifications. DON'T DO MODIFICATIONS AT THE MASTER BRANCH !!!)
 
-	$ git resed HEAD my_sketch/sketch.pde   (use this command if you added a file wiht $ git add ... but you want to remove it from the commit)
+	$ git resed HEAD my_sketch/sketch.pde   (use this command if you added a file with $ git add ... but you want to remove it from the commit)
 
 ---
 
