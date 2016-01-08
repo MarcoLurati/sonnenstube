@@ -3,7 +3,7 @@
 class Star {
   float posX, posY, velX, velY, sizeX, sizeY, angle, rotation_step;
   int id;
-  boolean active;
+  boolean active, display;
 
   Star(int id, float velX, float velY, float rotation) {    // constructor: initialise the parameters to create a new star
     this.id = id;
@@ -16,38 +16,46 @@ class Star {
     this.sizeY = 0;
     this.rotation_step = rotation;
     this.angle = 0;
+    this.display = false;
   }
 
-  void update (float sizeX, float sizeY) {    // function inside the star object to update its position, size and rotation
+  void update (float sizeX, float sizeY, float intensity) {    // function inside the star object to update its position, size and rotation
     pushMatrix();    // use push/popMatrix to limit the translation and rotation just to the current star and not to the whole canvas
     noStroke();
-    fill(255, 200);    // fill all the stars with white and a transparency
     this.posX += this.velX;    // increase the position of the star in X
     this.posY += this.velY;    // increase the position of the star in Y
-    
+
     float boundaries = width / 2 * sqrt(2);
-    
-    if(this.posX > boundaries + width/2 || this.posX < -boundaries  || this.posY > boundaries + width/2 || this.posY < -boundaries) {
+
+    if (this.posX > boundaries + width/2 || this.posX < -boundaries  || this.posY > boundaries + width/2 || this.posY < -boundaries) {
       //println("x: " + this.posX + "y :" + this.posY);
       init();    // if the star is out of the canvas, reset it
     }
-    
+
     translate(this.posX - width/2, this.posY - height/2);    // move the star to the new position
     this.angle += this.rotation_step;    // update the rotation angle of the star
     rotate(this.angle);    // rotate it
-    
+
     float center_distance = (pow(abs(this.posX - width/2), 2) + pow(abs(this.posY - height/2), 2)) / 300000 ;
-    
+
     //println(center_distance);
-    
+
     center_distance = map(center_distance, 0, 8, 0.1, 8);
-    
-    
-    
-    ellipse(0, 0, sizeX * center_distance, sizeY * center_distance);    // draw the star with the new sound level
+
+    if (this.display == true) {
+      rectMode(CENTER);
+      fill(intensity);    // fill all the stars with white and a transparency
+      noFill();
+      stroke(intensity);
+      strokeWeight(.5);
+      //ellipse(0, 0, sizeX * center_distance, sizeY * center_distance); 
+      ellipse(0, 0, sizeX * center_distance, sizeX * center_distance);
+      ellipse(0, 0, sizeY * center_distance, sizeY * center_distance);
+      //rect(0, 0, sizeX * center_distance, sizeY * center_distance);    // draw the star with the new sound level
+    }
     popMatrix();
   }
-   
+
   void init() {
     this.posX = width/2;
     this.posY = height/2;
@@ -55,5 +63,4 @@ class Star {
     this.velY = random(-2, 2);
     this.rotation_step = random(-PI/2, PI/2);
   }
-  
 }

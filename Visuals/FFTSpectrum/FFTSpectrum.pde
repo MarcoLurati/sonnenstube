@@ -1,6 +1,6 @@
 // Sonnenstube concert 29.01.2016
 // Marco
-// v3
+// v4
 
 import processing.sound.*;
 
@@ -10,7 +10,7 @@ int bands = 32;
 float[] spectrum = new float[bands];
 float[] spectrum_sum = new float[bands];
 
-Star[] stars = new Star[10000];  // the array containing the objects of the type "Star"
+Star[] stars = new Star[2000];  // the array containing the objects of the type "Star"
 
 // global variabels
 float bass_tones, hight_tones, canvas_rotation;
@@ -62,11 +62,6 @@ void draw() {
         break;
       }
     }
-    /*
-   stars = (Star[]) expand(stars, stars.length + 1);  // add one empty space more at the end of the array
-     stars[stars.length - 1] = new Star(random(-2, 2), random(-2, 2), random(-PI/2, PI/2));  // in the new empty space, add the new star
-     old_millis = millis();
-     */
   }
 
   translate(width/2, height/2);
@@ -75,9 +70,19 @@ void draw() {
 
   // get each star from the stars array, and update it with the new level of the basses and hights
   for (Star star : stars) {
-    //println(star.id);
     if (star.active == true) {
-      star.update(hight_tones, bass_tones);
+      star.display = true;
+      float intensity_star = map(mouseY, 0, height, 0, 255);
+      float intensity_lines = map(mouseY, 0, height, 255, 0);
+      star.update(hight_tones, bass_tones, intensity_star);
+      if(star.id > 0) {
+        pushMatrix();
+        stroke(255, intensity_lines);
+        strokeWeight(.5);
+        translate(-width/2, -height/2);
+        line(star.posX, star.posY, stars[star.id-1].posX, stars[star.id-1].posY);
+        popMatrix();
+      }
     }
   }
 }
