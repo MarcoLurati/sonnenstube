@@ -32,6 +32,7 @@ To connect to this repository, proceed as follow in the terminal:
 3) create your own branch to apply the modifications to the files:
 
     $ git checkout -b my_branch   (use your name pls, so $ git checkout -b marco e.g.)
+    $ git push --set-upstream origin my_branch	(to push your branch in the remote repository)
     
 4) now you can normally work to your sketches as usual from processing without caring about the terminal
 
