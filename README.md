@@ -1,9 +1,9 @@
 # sonnenstube
 Sonnenstube concert repo for visuals and so on.
 
-Fork the project with a new branch using your name pls.
-
 Use the latest version of Processing, the 3.0.1 because it contains all the new powerful libraries for video and sound management.
+
+---
 
 Installation of github:
 
@@ -17,7 +17,7 @@ Installation of github:
 	
 3) Done!
 
-
+---
 
 To connect to this repository, do the follow in the terminal:
 
@@ -45,8 +45,12 @@ To connect to this repository, do the follow in the terminal:
   
 	$ git push   (to push your files into the remote repository to made your files available for everybody)
   
-  
-Repeat the step 5) each time your sketch are ready to be released or with new working functionalities
+
+---
+
+Repeat the step 5) each time your sketchs are ready to be released or with new working functionalities
+
+---
 
 Some other userful git commands:
 
