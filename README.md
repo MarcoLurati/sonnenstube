@@ -5,6 +5,15 @@ Fork the project with a new branch using your name pls.
 
 Use the latest version of Processing, the 3.0.1 because it contains all the new powerful libraries for video and sound management.
 
+Installation of github:
+1) install Homebrew that allows u to install many programs directly form the terminal:
+	open the terminal, copy this and press enter:
+	$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+2) install github by copying this in the terminal and press enter:
+	$ brew install git
+3) Done!
+
+
 To connect to this repository, do the follow in the terminal:
 1) choose a place where to store the repository
     $ cd homefolder/documents/projects    e.g.
