@@ -20,6 +20,7 @@ Installation of github:
 3) Done!
 
 
+
 To connect to this repository, do the follow in the terminal:
 
 1) choose a place where to store the repository
@@ -39,15 +40,19 @@ To connect to this repository, do the follow in the terminal:
 5) once you are ready to share your sketch, go back to the terminal and do as follow:
 
   5.1) 
+  
   $ git status   (to see all the modifications/add u did)
   
   5.2) 
+  
   $ git add *    (to add all the modification) or  $ git add my_sketch/deep_space.pde   (to add just a specific file)
   
   5.3) 
+  
   $ git commit -m "message"  (insert a comment to keep track of what u did, e.g. "added keyboard control to the sketch")
   
-  5.4) 
+  5.4)
+  
   $ git push   (to push your files into the remote repository to made your files available for everybody)
   
   
@@ -55,12 +60,12 @@ Repeat the step 5) each time your sketch are ready to be released or with new wo
 
 Some other userful git commands:
 
-$ git status    (see what's going on in your files)
+	$ git status    (see what's going on in your files)
 
-$ git branch    (see all the branches used in the repository)
+	$ git branch    (see all the branches used in the repository)
 
-$ git checkout marco    (move to someone else branch to see his files and modifications. DON'T DO MODIFICATIONS AT THE MASTER BRANCH !!!)
+	$ git checkout marco    (move to someone else branch to see his files and modifications. DON'T DO MODIFICATIONS AT THE MASTER BRANCH !!!)
 
-$ git resed HEAD _path_to_file/sketch.pde   (remove a specific file if you don't want to publish it in the remote repository)
+	$ git resed HEAD _path_to_file/sketch.pde   (remove a specific file if you don't want to publish it in the remote repository)
 
 For questions, let me know.
