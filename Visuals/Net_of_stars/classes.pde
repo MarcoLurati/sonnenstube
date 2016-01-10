@@ -43,15 +43,11 @@ class Star {
     center_distance = map(center_distance, 0, 8, 0.1, 8);
 
     if (this.display == true) {
-      rectMode(CENTER);
-      fill(intensity);    // fill all the stars with white and a transparency
       noFill();
       stroke(intensity);
-      strokeWeight(.5);
-      //ellipse(0, 0, sizeX * center_distance, sizeY * center_distance); 
+      strokeWeight(map(center_distance, 0.1, 8, 0.5, 2));
       ellipse(0, 0, sizeX * center_distance, sizeX * center_distance);
       ellipse(0, 0, sizeY * center_distance, sizeY * center_distance);
-      //rect(0, 0, sizeX * center_distance, sizeY * center_distance);    // draw the star with the new sound level
     }
     popMatrix();
   }

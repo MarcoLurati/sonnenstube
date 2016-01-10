@@ -10,7 +10,7 @@ int bands = 32;
 float[] spectrum = new float[bands];
 float[] spectrum_sum = new float[bands];
 
-Star[] stars = new Star[2000];  // the array containing the objects of the type "Star"
+Star[] stars = new Star[1000];  // the array containing the objects of the type "Star"
 
 // global variabels
 float bass_tones, hight_tones, canvas_rotation;
@@ -18,7 +18,8 @@ int old_millis;
 
 void setup() {
   frameRate(40);
-  size(displayWidth, displayHeight, P2D);
+  size(displayWidth, displayHeight, P3D);
+  smooth(2);
 
   // Create an Input stream which is routed into the Amplitude analyzer
   fft = new FFT(this, bands);
@@ -55,13 +56,14 @@ void draw() {
 
 
   // each 200 milliseconds add the next star in the stars array
-  if (millis() - old_millis > 1000) {
+  if (millis() - old_millis > 20) {
     for (Star star : stars) {
       if (star.active == false) {
         star.active = true;
         break;
       }
     }
+    old_millis = millis();
   }
 
   translate(width/2, height/2);
@@ -72,8 +74,8 @@ void draw() {
   for (Star star : stars) {
     if (star.active == true) {
       star.display = true;
-      float intensity_star = map(mouseY, 0, height, 0, 255);
-      float intensity_lines = map(mouseY, 0, height, 255, 0);
+      float intensity_star = map(mouseY, 0, height/2, 0, 255);
+      float intensity_lines = map(mouseY, height/2, height, 255, 0);
       star.update(hight_tones, bass_tones, intensity_star);
       if(star.id > 0) {
         pushMatrix();
